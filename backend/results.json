@@ -1,0 +1,21 @@
+{
+  "routes26": 1,
+  "routes27": 1,
+  "allRoutesSample": [
+    {
+      "id": 3,
+      "date": "2025-12-28",
+      "type": "string"
+    },
+    {
+      "id": 2,
+      "date": "2025-12-26",
+      "type": "string"
+    },
+    {
+      "id": 1,
+      "date": "2025-12-27",
+      "type": "string"
+    }
+  ]
+}

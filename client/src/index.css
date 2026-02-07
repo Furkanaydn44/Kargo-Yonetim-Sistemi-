@@ -1,0 +1,178 @@
+:root {
+  --primary: #fcd34d;
+  /* Warm Yellow for "Sari" */
+  --primary-hover: #fbbf24;
+  --secondary: #94a3b8;
+  /* Light Grey */
+  --background: #1e1e1e;
+  /* Dark Smoked Grey (Füme) */
+  --surface: #2d2d2d;
+  /* Slightly lighter Smoked Grey */
+  --text: #e2e8f0;
+  /* White-ish Grey */
+  --text-muted: #94a3b8;
+  --border: #404040;
+  --glass: rgba(45, 45, 45, 0.85);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  background: linear-gradient(to right, var(--primary), #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Buttons */
+button,
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #eab308);
+  /* Rich Yellow Gradient */
+  color: #1e1e1e;
+  /* Dark text for contrast on yellow */
+  box-shadow: 0 4px 15px rgba(252, 211, 77, 0.4);
+  border: 1px solid #000000;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Forms */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.h-screen {
+  min-height: 80vh;
+}
+
+/* Card */
+.card {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.5rem 0;
+  /* Reduced height */
+  position: relative;
+  /* Embedded in page flow, not sticky/fixed */
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Table Hover */
+tr.hover-row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}

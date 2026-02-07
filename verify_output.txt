@@ -1,0 +1,15 @@
+
+--- TESTING UNLIMITED MODE ---
+Assignments: 3
+Vehicle 1 (Fixed): Load 1000kg
+Vehicle 2 (Rental): Load 1000kg
+Vehicle 3 (Rental): Load 1000kg
+SUCCESS_UNLIMITED: Rentals created for excess cargo.
+
+--- TESTING LIMITED MODE (Knapsack) ---
+Assignments: 3
+Vehicle 1 (Fixed): Load 1000kg
+Vehicle 2 (Fixed): Load 500kg
+Vehicle 3 (Fixed): Load 500kg
+Skipped Cargos: 1
+SUCCESS_LIMITED: Only fixed vehicles used, excess skipped.
